@@ -1,0 +1,111 @@
+{
+  "branch": "BP",
+  "display_name": "Build Pipeline",
+  "fantasy": "Shipping it",
+  "stat_domain": "Abilities, throwables, Ultimate charge",
+  "order": 4,
+  "tier_names": [
+    "Manual Build",
+    "Batch Script",
+    "CI Server",
+    "Automated Pipeline",
+    "Continuous Deployment"
+  ],
+  "nodes": [
+    {
+      "id": "BP_T0_CORE",
+      "tier": 0,
+      "type": "core",
+      "name_key": "tree.bp.bp_t0_core.name",
+      "desc_key": "tree.bp.bp_t0_core.desc",
+      "name_en": "Manual Build",
+      "desc_en": "Base; Ultimate (GOLD MASTER) available",
+      "icon": "icons/tree/bp_t0_core.png",
+      "cost": {
+        "studio_credits": 300,
+        "industry_knowledge": 0,
+        "keystone_tokens": 0
+      },
+      "requires_all": [],
+      "requires_any": [],
+      "exclusive_group": null,
+      "milestone_gate": 0,
+      "effects": [
+        {
+          "op": "grant_tag",
+          "tag": "ult_available"
+        }
+      ],
+      "ui": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "BP_T1_CORE",
+      "tier": 1,
+      "type": "core",
+      "name_key": "tree.bp.bp_t1_core.name",
+      "desc_key": "tree.bp.bp_t1_core.desc",
+      "name_en": "Batch Script",
+      "desc_en": "+15% Ultimate charge",
+      "icon": "icons/tree/bp_t1_core.png",
+      "cost": {
+        "studio_credits": 500,
+        "industry_knowledge": 0,
+        "keystone_tokens": 0
+      },
+      "requires_all": [
+        "BP_T0_CORE"
+      ],
+      "requires_any": [],
+      "exclusive_group": null,
+      "milestone_gate": 1,
+      "effects": [
+        {
+          "op": "stat_mod",
+          "stat": "ult_charge_rate",
+          "bucket": "increased",
+          "value": 0.15
+        }
+      ],
+      "ui": {
+        "x": 0,
+        "y": 1
+      }
+    },
+    {
+      "id": "BP_T1_MOD_THROW",
+      "tier": 1,
+      "type": "modifier",
+      "name_key": "tree.bp.bp_t1_mod_throw.name",
+      "desc_key": "tree.bp.bp_t1_mod_throw.desc",
+      "name_en": "Makefile",
+      "desc_en": "+1 throwable capacity (throwables arrive after the slice)",
+      "icon": "icons/tree/bp_t1_mod_throw.png",
+      "cost": {
+        "studio_credits": 650,
+        "industry_knowledge": 0,
+        "keystone_tokens": 0
+      },
+      "requires_all": [
+        "BP_T1_CORE"
+      ],
+      "requires_any": [],
+      "exclusive_group": null,
+      "milestone_gate": 1,
+      "effects": [
+        {
+          "op": "stat_mod",
+          "stat": "throwable_capacity",
+          "bucket": "flat",
+          "value": 1
+        }
+      ],
+      "ui": {
+        "x": 1,
+        "y": 1
+      }
+    }
+  ]
+}

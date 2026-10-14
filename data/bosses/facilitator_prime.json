@@ -1,0 +1,29 @@
+{
+  "boss_id": "FACILITATOR_PRIME",
+  "name_en": "Facilitator Prime",
+  "studio": "Saccharine Toddler Inc.",
+  "title_en": "Chief Alignment Officer (Interim)",
+  "hp": 3000,
+  "resist": 0.0,
+  "phase_thresholds": [0.66, 0.33],
+  "move_speed": [1.6, 2.2, 4.0],
+  "attack_cooldown_s": [3.6, 3.0, 2.4],
+  "roast_bank": "FACILITATOR_PRIME",
+  "home_category": "CRAFT",
+  "delivery_damage_reduction": 0.9,
+  "windup_ms": 1200,
+  "icon_reveal_ms": 700,
+  "hype_stack_damage": 0.08,
+  "hype_stack_dr": 0.05,
+  "hype_max": 5,
+  "hype_cycle_adds": 20,
+  "attacks": {
+    "icebreaker": { "projectiles": 16, "damage": 8, "morale": 3, "speed": 11, "slow_s": 1.0 },
+    "parking_lot": { "notes": 3, "arm_s": 0.8, "radius_m": 1.6, "root_s": 1.5, "life_s": 6 },
+    "breakout_rooms": { "duration_s": 6, "min_phase": 2, "arm_length_m": 9 }
+  },
+  "puddle": { "radius_m": 6, "morale_per_s": 4, "slow": 0.35 },
+  "rewards": { "studio_credits": 1500, "keystone_tokens": 1, "industry_knowledge": 5 },
+  "weakpoint_en": "the dry-erase marker in its heart",
+  "visual": { "height": 4.2 }
+}

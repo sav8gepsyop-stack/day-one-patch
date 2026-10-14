@@ -1,0 +1,333 @@
+{
+  "boss_id": "FACILITATOR_PRIME",
+  "home_category": "CRAFT",
+  "_comment": "Slice bank: 10 lines. Ship target is >=60 per boss (GDD 11). punch_ms values are estimates until VO is recorded.",
+  "lines": [
+    {
+      "id": "FP_SIG_001",
+      "phase": [
+        1,
+        2,
+        3
+      ],
+      "category": "CRAFT",
+      "text_key": "roast.fp.sig_001",
+      "text_en": "Before you shoot me, can we take a moment to align on why you're shooting me? Breakout rooms, everyone.",
+      "audio": "vo/bosses/facilitator_prime/fp_sig_001.ogg",
+      "duration_ms": 5600,
+      "punch_ms": 4500,
+      "morale_damage": 20,
+      "weight": 1.2,
+      "cooldown_s": 45,
+      "context": [],
+      "conditions": {
+        "min_hype_stacks": 0,
+        "coop_players_min": 1
+      },
+      "target": "random_player",
+      "retorts": {
+        "default": "vo/player/{vo_set}/retort_mirror_01.ogg",
+        "perfect_text_en": "Says the boss whose final form is a placeholder texture."
+      },
+      "tags": [
+        "signature",
+        "workshop"
+      ],
+      "rating": "T"
+    },
+    {
+      "id": "FP_CRAFT_001",
+      "phase": [
+        1,
+        2,
+        3
+      ],
+      "category": "CRAFT",
+      "text_key": "roast.fp.craft_001",
+      "text_en": "Your story has the stakes of a Saints Row reboot. Everyone's a startup, nobody's a saint.",
+      "audio": "vo/bosses/facilitator_prime/fp_craft_001.ogg",
+      "duration_ms": 5200,
+      "punch_ms": 4300,
+      "morale_damage": 25,
+      "weight": 1.5,
+      "cooldown_s": 45,
+      "context": [],
+      "conditions": {
+        "min_hype_stacks": 0,
+        "coop_players_min": 1
+      },
+      "target": "random_player",
+      "retorts": {
+        "default": "vo/player/{vo_set}/retort_mirror_01.ogg",
+        "perfect_text_en": "Says the boss whose final form is a placeholder texture."
+      },
+      "tags": [
+        "saints_row",
+        "writing"
+      ],
+      "rating": "T"
+    },
+    {
+      "id": "FP_CRAFT_002",
+      "phase": [
+        1,
+        2,
+        3
+      ],
+      "category": "CRAFT",
+      "text_key": "roast.fp.craft_002",
+      "text_en": "Love the art direction. Very 'we had a rebrand but forgot the game.'",
+      "audio": "vo/bosses/facilitator_prime/fp_craft_002.ogg",
+      "duration_ms": 4300,
+      "punch_ms": 3400,
+      "morale_damage": 20,
+      "weight": 1.5,
+      "cooldown_s": 45,
+      "context": [],
+      "conditions": {
+        "min_hype_stacks": 0,
+        "coop_players_min": 1
+      },
+      "target": "random_player",
+      "retorts": {
+        "default": "vo/player/{vo_set}/retort_mirror_01.ogg",
+        "perfect_text_en": "Says the boss whose final form is a placeholder texture."
+      },
+      "tags": [
+        "art",
+        "rebrand"
+      ],
+      "rating": "T"
+    },
+    {
+      "id": "FP_CRAFT_003",
+      "phase": [
+        1,
+        2,
+        3
+      ],
+      "category": "CRAFT",
+      "text_key": "roast.fp.craft_003",
+      "text_en": "Your dialogue has the subtlety of a corporate mission statement read at gunpoint.",
+      "audio": "vo/bosses/facilitator_prime/fp_craft_003.ogg",
+      "duration_ms": 4800,
+      "punch_ms": 4000,
+      "morale_damage": 25,
+      "weight": 1.5,
+      "cooldown_s": 45,
+      "context": [],
+      "conditions": {
+        "min_hype_stacks": 0,
+        "coop_players_min": 1
+      },
+      "target": "random_player",
+      "retorts": {
+        "default": "vo/player/{vo_set}/retort_mirror_01.ogg",
+        "perfect_text_en": "Says the boss whose final form is a placeholder texture."
+      },
+      "tags": [
+        "dialogue",
+        "corporate"
+      ],
+      "rating": "T"
+    },
+    {
+      "id": "FP_HYPE_001",
+      "phase": [
+        1,
+        2,
+        3
+      ],
+      "category": "HYPE",
+      "text_key": "roast.fp.hype_001",
+      "text_en": "Your whole build is a vertical slice. Like every E3 demo that never existed.",
+      "audio": "vo/bosses/facilitator_prime/fp_hype_001.ogg",
+      "duration_ms": 4600,
+      "punch_ms": 3700,
+      "morale_damage": 20,
+      "weight": 1.0,
+      "cooldown_s": 45,
+      "context": [],
+      "conditions": {
+        "min_hype_stacks": 0,
+        "coop_players_min": 1
+      },
+      "target": "random_player",
+      "retorts": {
+        "default": "vo/player/{vo_set}/retort_receipts_01.ogg",
+        "perfect_text_en": "You said 'next quarter' three years ago. I've got the screenshot."
+      },
+      "tags": [
+        "vertical_slice",
+        "e3"
+      ],
+      "rating": "T"
+    },
+    {
+      "id": "FP_HYPE_002",
+      "phase": [
+        1,
+        2,
+        3
+      ],
+      "category": "HYPE",
+      "text_key": "roast.fp.hype_002",
+      "text_en": "That aim? It's a roadmap. Lots of arrows, nothing delivered.",
+      "audio": "vo/bosses/facilitator_prime/fp_hype_002.ogg",
+      "duration_ms": 4000,
+      "punch_ms": 3200,
+      "morale_damage": 15,
+      "weight": 1.0,
+      "cooldown_s": 45,
+      "context": [
+        "player_missed_shots"
+      ],
+      "conditions": {
+        "min_hype_stacks": 0,
+        "coop_players_min": 1
+      },
+      "target": "random_player",
+      "retorts": {
+        "default": "vo/player/{vo_set}/retort_receipts_01.ogg",
+        "perfect_text_en": "You said 'next quarter' three years ago. I've got the screenshot."
+      },
+      "tags": [
+        "roadmap",
+        "aim"
+      ],
+      "rating": "T"
+    },
+    {
+      "id": "FP_LAUNCH_001",
+      "phase": [
+        1,
+        2,
+        3
+      ],
+      "category": "LAUNCH",
+      "text_key": "roast.fp.launch_001",
+      "text_en": "Redfall shipped at thirty frames per second. You're running at three.",
+      "audio": "vo/bosses/facilitator_prime/fp_launch_001.ogg",
+      "duration_ms": 4200,
+      "punch_ms": 3500,
+      "morale_damage": 25,
+      "weight": 1.0,
+      "cooldown_s": 45,
+      "context": [
+        "player_respawned"
+      ],
+      "conditions": {
+        "min_hype_stacks": 0,
+        "coop_players_min": 1
+      },
+      "target": "random_player",
+      "retorts": {
+        "default": "vo/player/{vo_set}/retort_patch_notes_01.ogg",
+        "perfect_text_en": "Patch 1.0.1: fixed an issue where you were talking."
+      },
+      "tags": [
+        "redfall",
+        "performance"
+      ],
+      "rating": "T"
+    },
+    {
+      "id": "FP_LAUNCH_002",
+      "phase": [
+        1,
+        2,
+        3
+      ],
+      "category": "LAUNCH",
+      "text_key": "roast.fp.launch_002",
+      "text_en": "You move like Forspoken talks. Constantly, and nobody asked.",
+      "audio": "vo/bosses/facilitator_prime/fp_launch_002.ogg",
+      "duration_ms": 3900,
+      "punch_ms": 3100,
+      "morale_damage": 20,
+      "weight": 1.0,
+      "cooldown_s": 45,
+      "context": [],
+      "conditions": {
+        "min_hype_stacks": 0,
+        "coop_players_min": 1
+      },
+      "target": "random_player",
+      "retorts": {
+        "default": "vo/player/{vo_set}/retort_patch_notes_01.ogg",
+        "perfect_text_en": "Patch 1.0.1: fixed an issue where you were talking."
+      },
+      "tags": [
+        "forspoken"
+      ],
+      "rating": "T"
+    },
+    {
+      "id": "FP_LIVE_001",
+      "phase": [
+        1,
+        2,
+        3
+      ],
+      "category": "LIVE",
+      "text_key": "roast.fp.live_001",
+      "text_en": "Your health bar's dropping like a live-service roadmap after the first quarterly call.",
+      "audio": "vo/bosses/facilitator_prime/fp_live_001.ogg",
+      "duration_ms": 4800,
+      "punch_ms": 3900,
+      "morale_damage": 30,
+      "weight": 1.0,
+      "cooldown_s": 45,
+      "context": [
+        "player_low_hp"
+      ],
+      "conditions": {
+        "min_hype_stacks": 0,
+        "coop_players_min": 1
+      },
+      "target": "lowest_hp",
+      "retorts": {
+        "default": "vo/player/{vo_set}/retort_player_count_01.ogg",
+        "perfect_text_en": "Big talk from a lobby with zero players in it."
+      },
+      "tags": [
+        "live_service",
+        "roadmap"
+      ],
+      "rating": "T"
+    },
+    {
+      "id": "FP_LIVE_002",
+      "phase": [
+        1,
+        2,
+        3
+      ],
+      "category": "LIVE",
+      "text_key": "roast.fp.live_002",
+      "text_en": "I'd sell you a battle pass, but you won't last a season.",
+      "audio": "vo/bosses/facilitator_prime/fp_live_002.ogg",
+      "duration_ms": 3600,
+      "punch_ms": 2900,
+      "morale_damage": 25,
+      "weight": 1.0,
+      "cooldown_s": 45,
+      "context": [
+        "player_used_scope_creep"
+      ],
+      "conditions": {
+        "min_hype_stacks": 0,
+        "coop_players_min": 1
+      },
+      "target": "random_player",
+      "retorts": {
+        "default": "vo/player/{vo_set}/retort_player_count_01.ogg",
+        "perfect_text_en": "Big talk from a lobby with zero players in it."
+      },
+      "tags": [
+        "battle_pass"
+      ],
+      "rating": "T"
+    }
+  ]
+}

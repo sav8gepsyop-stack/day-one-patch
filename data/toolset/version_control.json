@@ -1,0 +1,106 @@
+{
+  "branch": "VC",
+  "display_name": "Version Control",
+  "fantasy": "Never losing work",
+  "stat_domain": "Survivability, Morale resistance, rollback/revive",
+  "order": 3,
+  "tier_names": [
+    "Folder named final_FINAL_v2",
+    "Local Repo",
+    "Branching Strategy",
+    "Distributed VCS",
+    "Immutable History"
+  ],
+  "nodes": [
+    {
+      "id": "VC_T0_CORE",
+      "tier": 0,
+      "type": "core",
+      "name_key": "tree.vc.vc_t0_core.name",
+      "desc_key": "tree.vc.vc_t0_core.desc",
+      "name_en": "final_FINAL_v2",
+      "desc_en": "Base",
+      "icon": "icons/tree/vc_t0_core.png",
+      "cost": {
+        "studio_credits": 300,
+        "industry_knowledge": 0,
+        "keystone_tokens": 0
+      },
+      "requires_all": [],
+      "requires_any": [],
+      "exclusive_group": null,
+      "milestone_gate": 0,
+      "effects": [],
+      "ui": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "VC_T1_CORE",
+      "tier": 1,
+      "type": "core",
+      "name_key": "tree.vc.vc_t1_core.name",
+      "desc_key": "tree.vc.vc_t1_core.desc",
+      "name_en": "Local Repo",
+      "desc_en": "+15% max HP",
+      "icon": "icons/tree/vc_t1_core.png",
+      "cost": {
+        "studio_credits": 500,
+        "industry_knowledge": 0,
+        "keystone_tokens": 0
+      },
+      "requires_all": [
+        "VC_T0_CORE"
+      ],
+      "requires_any": [],
+      "exclusive_group": null,
+      "milestone_gate": 1,
+      "effects": [
+        {
+          "op": "stat_mod",
+          "stat": "max_hp",
+          "bucket": "increased",
+          "value": 0.15
+        }
+      ],
+      "ui": {
+        "x": 0,
+        "y": 1
+      }
+    },
+    {
+      "id": "VC_T1_MOD_MORALE",
+      "tier": 1,
+      "type": "modifier",
+      "name_key": "tree.vc.vc_t1_mod_morale.name",
+      "desc_key": "tree.vc.vc_t1_mod_morale.desc",
+      "name_en": ".gitignore",
+      "desc_en": "-15% Morale damage taken",
+      "icon": "icons/tree/vc_t1_mod_morale.png",
+      "cost": {
+        "studio_credits": 650,
+        "industry_knowledge": 0,
+        "keystone_tokens": 0
+      },
+      "requires_all": [
+        "VC_T1_CORE"
+      ],
+      "requires_any": [],
+      "exclusive_group": null,
+      "milestone_gate": 1,
+      "effects": [
+        {
+          "op": "stat_mod",
+          "stat": "morale_damage_taken",
+          "bucket": "increased",
+          "value": -0.15
+        }
+      ],
+      "ui": {
+        "x": 1,
+        "y": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "branch": "ED",
+  "display_name": "Editor",
+  "fantasy": "Writing the code",
+  "stat_domain": "Base weapon damage, weak-point damage",
+  "order": 0,
+  "tier_names": [
+    "Basic Script Editor",
+    "Syntax Highlighter",
+    "Linted IDE",
+    "Refactoring Suite",
+    "Self-Documenting Code (myth)"
+  ],
+  "nodes": [
+    {
+      "id": "ED_T0_CORE",
+      "tier": 0,
+      "type": "core",
+      "name_key": "tree.ed.ed_t0_core.name",
+      "desc_key": "tree.ed.ed_t0_core.desc",
+      "name_en": "Basic Script Editor",
+      "desc_en": "Base. +0% (unlocks branch)",
+      "icon": "icons/tree/ed_t0_core.png",
+      "cost": {
+        "studio_credits": 300,
+        "industry_knowledge": 0,
+        "keystone_tokens": 0
+      },
+      "requires_all": [],
+      "requires_any": [],
+      "exclusive_group": null,
+      "milestone_gate": 0,
+      "effects": [],
+      "ui": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "ED_T1_CORE",
+      "tier": 1,
+      "type": "core",
+      "name_key": "tree.ed.ed_t1_core.name",
+      "desc_key": "tree.ed.ed_t1_core.desc",
+      "name_en": "Syntax Highlighter",
+      "desc_en": "+8% weapon damage",
+      "icon": "icons/tree/ed_t1_core.png",
+      "cost": {
+        "studio_credits": 500,
+        "industry_knowledge": 0,
+        "keystone_tokens": 0
+      },
+      "requires_all": [
+        "ED_T0_CORE"
+      ],
+      "requires_any": [],
+      "exclusive_group": null,
+      "milestone_gate": 1,
+      "effects": [
+        {
+          "op": "stat_mod",
+          "stat": "damage",
+          "bucket": "increased",
+          "value": 0.08
+        }
+      ],
+      "ui": {
+        "x": 0,
+        "y": 1
+      }
+    },
+    {
+      "id": "ED_T1_MOD_WEAK",
+      "tier": 1,
+      "type": "modifier",
+      "name_key": "tree.ed.ed_t1_mod_weak.name",
+      "desc_key": "tree.ed.ed_t1_mod_weak.desc",
+      "name_en": "Bracket Matching",
+      "desc_en": "+20% weak-point damage",
+      "icon": "icons/tree/ed_t1_mod_weak.png",
+      "cost": {
+        "studio_credits": 650,
+        "industry_knowledge": 0,
+        "keystone_tokens": 0
+      },
+      "requires_all": [
+        "ED_T1_CORE"
+      ],
+      "requires_any": [],
+      "exclusive_group": null,
+      "milestone_gate": 1,
+      "effects": [
+        {
+          "op": "stat_mod",
+          "stat": "weakpoint_damage",
+          "bucket": "increased",
+          "value": 0.2
+        }
+      ],
+      "ui": {
+        "x": 1,
+        "y": 1
+      }
+    }
+  ]
+}

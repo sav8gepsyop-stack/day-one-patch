@@ -1,0 +1,29 @@
+{
+  "level_id": "S1_OPEN_PLAN_LOFT",
+  "studio": "Saccharine Toddler Inc.",
+  "name_en": "The Open-Plan Loft",
+  "size_m": [44, 36],
+  "wall_height_m": 7,
+  "warmup_s": 6,
+  "intermission_s": 8,
+  "spawn_interval_s": 0.45,
+  "player_spawns": [[-2, 0, 14], [2, 0, 14], [-4, 0, 12], [4, 0, 12]],
+  "enemy_spawns": [[-19, 0, -15], [0, 0, -16], [19, 0, -15], [-20, 0, 0], [20, 0, 0], [0, 0, 16]],
+  "boss_spawn": [0, 0, -8],
+  "snacks": [[-18, 0, 14], [18, 0, 14], [0, 0, -15]],
+  "snack_heal": 30,
+  "snack_respawn_s": 20,
+  "coffee_machine": [-19, 0, 12],
+  "design_docs": [
+    { "id": "S1_DOC_FONT", "pos": [12, 0, -6], "industry_knowledge": 2, "text_en": "Font debate, day 400: we have agreed to schedule a meeting to agree on a framework for agreeing." },
+    { "id": "S1_DOC_PASS", "pos": [-12, 0, -10], "industry_knowledge": 2, "text_en": "Platinum Pass deliverable: 'make the villain more relatable.' Client's villain is a tax form." },
+    { "id": "S1_DOC_WEAK", "pos": [6, 0, 8], "industry_knowledge": 3, "text_en": "Facilitator Prime keeps a dry-erase marker where its heart should be. It hates being reminded of its own drafts. (Hint: MIRROR its CRAFT roasts.)" }
+  ],
+  "waves": [
+    { "name_en": "Onboarding", "spawns": { "hype_intern": 6 } },
+    { "name_en": "All-Hands", "spawns": { "hype_intern": 6, "messaging_consultant": 2 } },
+    { "name_en": "Compliance Review", "spawns": { "hype_intern": 5, "messaging_consultant": 2, "compliance_officer": 1 } }
+  ],
+  "boss": "FACILITATOR_PRIME",
+  "kill_credit_share_radius_m": 25
+}

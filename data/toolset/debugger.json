@@ -1,0 +1,111 @@
+{
+  "branch": "DB",
+  "display_name": "Debugger",
+  "fantasy": "Finding the flaw",
+  "stat_domain": "Crit chance, weak points, Insult counter windows",
+  "order": 2,
+  "tier_names": [
+    "Print Statements",
+    "Breakpoints",
+    "Profiler",
+    "Memory Sanitizer",
+    "Time-Travel Debugger"
+  ],
+  "nodes": [
+    {
+      "id": "DB_T0_CORE",
+      "tier": 0,
+      "type": "core",
+      "name_key": "tree.db.db_t0_core.name",
+      "desc_key": "tree.db.db_t0_core.desc",
+      "name_en": "Print Statements",
+      "desc_en": "Base; damage numbers visible",
+      "icon": "icons/tree/db_t0_core.png",
+      "cost": {
+        "studio_credits": 300,
+        "industry_knowledge": 0,
+        "keystone_tokens": 0
+      },
+      "requires_all": [],
+      "requires_any": [],
+      "exclusive_group": null,
+      "milestone_gate": 0,
+      "effects": [
+        {
+          "op": "grant_tag",
+          "tag": "show_damage_numbers"
+        }
+      ],
+      "ui": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "DB_T1_CORE",
+      "tier": 1,
+      "type": "core",
+      "name_key": "tree.db.db_t1_core.name",
+      "desc_key": "tree.db.db_t1_core.desc",
+      "name_en": "Breakpoints",
+      "desc_en": "+5% crit chance",
+      "icon": "icons/tree/db_t1_core.png",
+      "cost": {
+        "studio_credits": 500,
+        "industry_knowledge": 0,
+        "keystone_tokens": 0
+      },
+      "requires_all": [
+        "DB_T0_CORE"
+      ],
+      "requires_any": [],
+      "exclusive_group": null,
+      "milestone_gate": 1,
+      "effects": [
+        {
+          "op": "stat_mod",
+          "stat": "crit_chance",
+          "bucket": "flat",
+          "value": 0.05
+        }
+      ],
+      "ui": {
+        "x": 0,
+        "y": 1
+      }
+    },
+    {
+      "id": "DB_T1_MOD_ROAST",
+      "tier": 1,
+      "type": "modifier",
+      "name_key": "tree.db.db_t1_mod_roast.name",
+      "desc_key": "tree.db.db_t1_mod_roast.desc",
+      "name_en": "Watch Window",
+      "desc_en": "Roast telegraph shows category icon 0.5 s earlier",
+      "icon": "icons/tree/db_t1_mod_roast.png",
+      "cost": {
+        "studio_credits": 650,
+        "industry_knowledge": 0,
+        "keystone_tokens": 0
+      },
+      "requires_all": [
+        "DB_T1_CORE"
+      ],
+      "requires_any": [],
+      "exclusive_group": null,
+      "milestone_gate": 1,
+      "effects": [
+        {
+          "op": "stat_mod",
+          "stat": "roast_icon_lead_ms",
+          "bucket": "flat",
+          "value": 500
+        }
+      ],
+      "ui": {
+        "x": 1,
+        "y": 1
+      }
+    }
+  ]
+}

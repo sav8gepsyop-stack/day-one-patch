@@ -1,0 +1,112 @@
+{
+  "branch": "CP",
+  "display_name": "Compiler",
+  "fantasy": "Making it run fast",
+  "stat_domain": "Fire rate, reload, charge speed",
+  "order": 1,
+  "tier_names": [
+    "Interpreter",
+    "Incremental Compiler",
+    "Optimizing Compiler",
+    "Refactored Code Compiler",
+    "Self-Hosting Compiler"
+  ],
+  "nodes": [
+    {
+      "id": "CP_T0_CORE",
+      "tier": 0,
+      "type": "core",
+      "name_key": "tree.cp.cp_t0_core.name",
+      "desc_key": "tree.cp.cp_t0_core.desc",
+      "name_en": "Interpreter",
+      "desc_en": "Base",
+      "icon": "icons/tree/cp_t0_core.png",
+      "cost": {
+        "studio_credits": 300,
+        "industry_knowledge": 0,
+        "keystone_tokens": 0
+      },
+      "requires_all": [],
+      "requires_any": [],
+      "exclusive_group": null,
+      "milestone_gate": 0,
+      "effects": [],
+      "ui": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "CP_T1_CORE",
+      "tier": 1,
+      "type": "core",
+      "name_key": "tree.cp.cp_t1_core.name",
+      "desc_key": "tree.cp.cp_t1_core.desc",
+      "name_en": "Incremental Compiler",
+      "desc_en": "+10% reload speed",
+      "icon": "icons/tree/cp_t1_core.png",
+      "cost": {
+        "studio_credits": 500,
+        "industry_knowledge": 0,
+        "keystone_tokens": 0
+      },
+      "requires_all": [
+        "CP_T0_CORE"
+      ],
+      "requires_any": [],
+      "exclusive_group": null,
+      "milestone_gate": 1,
+      "effects": [
+        {
+          "op": "stat_mod",
+          "stat": "reload_speed",
+          "bucket": "increased",
+          "value": 0.1
+        }
+      ],
+      "ui": {
+        "x": 0,
+        "y": 1
+      }
+    },
+    {
+      "id": "CP_T1_MOD_CHG",
+      "tier": 1,
+      "type": "modifier",
+      "name_key": "tree.cp.cp_t1_mod_chg.name",
+      "desc_key": "tree.cp.cp_t1_mod_chg.desc",
+      "name_en": "Precompiled Headers",
+      "desc_en": "Day-One Patch Railgun charge time -20% (railgun arrives after the slice)",
+      "icon": "icons/tree/cp_t1_mod_chg.png",
+      "cost": {
+        "studio_credits": 650,
+        "industry_knowledge": 0,
+        "keystone_tokens": 0
+      },
+      "requires_all": [
+        "CP_T1_CORE"
+      ],
+      "requires_any": [],
+      "exclusive_group": null,
+      "milestone_gate": 1,
+      "effects": [
+        {
+          "op": "stat_mod",
+          "stat": "charge_time",
+          "bucket": "more",
+          "value": -0.2,
+          "conditions": {
+            "weapon_tags_all": [
+              "patch",
+              "energy"
+            ]
+          }
+        }
+      ],
+      "ui": {
+        "x": 1,
+        "y": 1
+      }
+    }
+  ]
+}

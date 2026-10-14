@@ -1,0 +1,73 @@
+{
+  "weapons": [
+    {
+      "id": "HFS",
+      "name_en": "Hotfix Shotgun",
+      "slot": "primary",
+      "kind": "hitscan_spread",
+      "fantasy": "Fixes problems fast and badly.",
+      "tags": ["ballistic", "patch"],
+      "damage": 14,
+      "pellets": 8,
+      "spread_deg": 6.5,
+      "range_m": 32,
+      "fire_rate": 1.4,
+      "magazine": 6,
+      "reload_s": 1.8,
+      "crit_chance": 0.05,
+      "regression_chance": 0.10,
+      "regression_radius_m": 15,
+      "regression_duration_s": 10,
+      "color": "#ff9b3d"
+    },
+    {
+      "id": "NIB",
+      "name_en": "Narrative Integrity Blaster",
+      "slot": "primary",
+      "kind": "charge_bolt",
+      "fantasy": "Forces enemies into a dialogue choice.",
+      "tags": ["narrative", "energy"],
+      "damage": 18,
+      "charged_damage_mult_boss": 2.5,
+      "range_m": 60,
+      "fire_rate": 3.0,
+      "magazine": 12,
+      "reload_s": 1.6,
+      "crit_chance": 0.05,
+      "charge_time_s": 0.8,
+      "stun_s": 3.0,
+      "agree_aoe_radius_m": 3.5,
+      "agree_aoe_damage": 40,
+      "disagree_speed": 16,
+      "disagree_duration_s": 1.2,
+      "disagree_impact_damage": 35,
+      "lie_duration_s": 8.0,
+      "color": "#7cf7ff"
+    },
+    {
+      "id": "SCL",
+      "name_en": "Scope Creep Launcher",
+      "slot": "heavy",
+      "kind": "projectile_feature",
+      "fantasy": "Adds random unnecessary features to the world.",
+      "tags": ["scope", "explosive"],
+      "damage": 60,
+      "aoe_radius_m": 3.5,
+      "projectile_speed": 26,
+      "fire_rate": 0.8,
+      "magazine": 3,
+      "reload_s": 2.4,
+      "crit_chance": 0.0,
+      "bloat_per_shot": 0.10,
+      "bloat_reset_s": 4.0,
+      "features": {
+        "crafting_bench": { "weight": 1, "fuse_s": 1.0, "damage": 80, "radius_m": 4.0 },
+        "fishing_pond": { "weight": 1, "duration_s": 8, "radius_m": 4.0, "slow": 0.6 },
+        "battle_pass_kiosk": { "weight": 1, "duration_s": 8, "lure_radius_m": 10, "vulnerability": 0.5 },
+        "horse": { "weight": 1, "duration_s": 2.5, "speed": 14, "damage": 60, "hit_radius_m": 1.6 },
+        "seasonal_event_tree": { "weight": 1, "duration_s": 8, "radius_m": 5.0, "heal_per_s": 8 }
+      },
+      "color": "#c38bff"
+    }
+  ]
+}
