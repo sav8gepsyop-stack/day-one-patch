@@ -1,0 +1,9 @@
+{
+  "_comment": "Vertical-slice overrides. starting_milestone=1 lets players buy T1 nodes during the slice; the real game gates T1 behind beating Studio 1.",
+  "starting_milestone": 1,
+  "loadout": ["HFS", "NIB", "SCL"],
+  "level": "open_plan_loft",
+  "steam_app_id": 480,
+  "max_players": 4,
+  "debug_credit_grant": 1000
+}
